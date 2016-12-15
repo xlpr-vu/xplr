@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+	version="3.0"> -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Xplr</display-name>
+	<servlet>
+		<servlet-name>Application Servlet</servlet-name>
+		<servlet-class>com.ibm.cloudoe.samples.DemoServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>signin</servlet-name>
+		<servlet-class>facebook4j.examples.signin.SignInServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>callback</servlet-name>
+		<servlet-class>facebook4j.examples.signin.CallbackServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>facebook4j.examples.signin.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>post</servlet-name>
+		<servlet-class>facebook4j.examples.signin.PostServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>tokenInfo</servlet-name>
+		<servlet-class>facebook4j.examples.signin.TokenInfoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>events</servlet-name>
+		<servlet-class>com.xlpr.event.CreatEventServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>createvent</servlet-name>
+		<servlet-class>com.xlpr.event.CreatEventServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description></description>
+		<display-name>UserController</display-name>
+		<servlet-name>UserController</servlet-name>
+		<servlet-class>com.xlpr.controller.EventController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserController</servlet-name>
+		<url-pattern>/UserController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Application Servlet</servlet-name>
+		<url-pattern>/demo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>signin</servlet-name>
+		<url-pattern>/signin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>callback</servlet-name>
+		<url-pattern>/callback</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>post</servlet-name>
+		<url-pattern>/post</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>tokenInfo</servlet-name>
+		<url-pattern>/tokenInfo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>createvent</servlet-name>
+		<url-pattern>/createvent</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>events</servlet-name>
+		<url-pattern>/events</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	<error-page>
+		<exception-type>facebook4j.FacebookException</exception-type>
+		<location>/error.jsp</location>
+	</error-page>
+	<!-- <filter>
+        <filter-name>MyFilter</filter-name>
+        <filter-class>com.xlpr.util.MyStruts2Filter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>characterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>MyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping> -->
+	<!-- <listener> -->
+	<!-- <listener-class> -->
+	<!-- com.ibm.app.AppListener -->
+	<!-- </listener-class> -->
+	<!-- </listener> -->
+</web-app>

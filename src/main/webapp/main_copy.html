@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<link rel="stylesheet" type="text/css" href="css/event.css">
+	<script type="text/javascript" src="javascripts/data/coordinates.js"></script>
+
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<body>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">My Profile</a>
+  <a href="#">My Events</a>
+  <a href="#">My Routes</a>
+  <a href="index.html">Logout</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<div class="logo"><img src="src/logo_blue.png"></div>
+
+
+<div class="slideshow-container">
+
+
+<div class="mySlides fade">
+  <img src="http://i.imgur.com/MmZmCqI.jpg" style="width:100%">
+  <div class="text">
+	<table style="text-align:left;" >
+	<tr><td><b style="font-size:45px;cursor:pointer;text-align:center;">Paid Successfully!</b></td>
+		  <tr><td><b style="font-size:30px;cursor:pointer">Miens Amsterdam Party</b></td>
+		  </tr>
+		  <tr><td></td></tr>
+		  <tr>
+			<td>The best way to experience Amsterdam! Join me and my friends. Come and enjoy the real Amsterdam! Tired of all the touristy stuff? I am throwing a party with my friends and we like you to join! We would like to meet travelers and have a great time. We will just be serving real Amsterdam Craft Beer and Amsterdam Snacks!</td>
+		  </tr>
+		  <tr><td></td></tr>
+		  <tr><p>
+			<td>Bilderdijkstraat 140, 1053 LA, Amsterdam</td>
+		  </tr>
+		  <tr>
+			<td>15-12-2016</td>
+		  </tr>
+		  <tr>
+			<td>22:00 - 03:00 hrs</td>
+		  </tr>
+		  <tr>
+			<td><b style="font-size:20px;cursor:pointer">&#8364;15</b></td>
+		  </tr>
+		  <tr><td style="text-align:right;"><a href="map.html">
+<button class="button">Show Route</button></a></td></tr>
+	  </table> 
+  </div>
+</div>
+
+
+<a class="prev" onclick="plusSlides(1)">&#120;</a>
+<!-- <a class="next" onclick="plusSlides(1)">&#10084;</a> -->
+<a class="next" onclick="plusSlides(1)">&#10084;</a>
+
+</div>
+<br>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) 
+  {
+  	slideIndex = 1
+  }
+
+  if (n < 1) 
+  {
+  	slideIndex = slides.length
+  }
+
+  for (i = 0; i < slides.length; i++) 
+  {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+  
+}
+</script>
+
+</body>
+</html> 

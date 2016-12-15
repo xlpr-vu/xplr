@@ -1,0 +1,119 @@
+html,body{
+	height:100%;
+	margin:0;
+	color:#6a6f8c;
+	background:url(https://images8.alphacoders.com/545/thumb-1920-545211.jpg) no-repeat center;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.signup-wrap{
+	width:50%;
+	height:60%;
+	margin:0 auto;
+	max-width:525px;
+	min-height:670px;
+	position:relative;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.profpic{
+  display: flex;
+  justify-content: center;
+  padding-bottom:2%;
+}
+
+.signup-html{
+	width:100%;
+	height:100%;
+	position:relative;
+	padding:0 15% 17% 15%;
+	background:rgba(40,57,101,.9);
+}
+
+.topBar{
+	width:100%;
+	height:20%;
+	/*position: relative;*/
+	
+}
+
+.logo{
+	margin-top: 0.67em;
+	width: 100%;
+	height:100%;
+	position:relative;
+	max-width: 100%;
+	background-image: url("Picture2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.signup-form .group .label,
+.signup-form .group .button,
+.signup-form .dropdown .label{
+	text-transform:uppercase;
+}
+
+.signup-form{
+	margin-top: 5%;
+	min-height:345px;
+	position:relative;
+	-webkit-perspective:1000px;
+	        perspective:1000px;
+	-webkit-transform-style:preserve-3d;
+	        transform-style:preserve-3d;
+}
+.signup-form .group,
+.signup-form .dropdown{
+	margin-bottom:15px;
+}
+.signup-form .group .label,
+.signup-form .group .input,
+.signup-form .group .button,
+.signup-form .dropdown .label,
+.signup-form .dropdown .gender{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+
+option {
+	color: black;
+}
+.signup-form .group .input,
+.signup-form .group .button,
+.signup-form .dropdown .gender{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+
+.signup-form .group .label,
+.signup-form .dropdown .label{
+	color:#aaa;
+	font-size:12px;
+}
+.signup-form .group .button{
+	background:#1161ee;
+}
+
+
+.hr{
+	height:2px;
+	margin:5% 0 5% 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+
+}
+
+.foot-lnk span{
+	color: #1161ee;
+}
